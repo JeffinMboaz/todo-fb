@@ -26,7 +26,7 @@ const EditTodo = () => {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          `http://localhost:5005/api/todos/${id}`,
+          `${import.meta.env.VITE_BACKEND_BASE_URL}/api/todos/${id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -52,7 +52,7 @@ const EditTodo = () => {
       const token = localStorage.getItem("token");
       const data = { title, completed };
       await axios.put(
-        `http://localhost:5005/api/todos/update/${id}`,
+        `${import.meta.env.VITE_BACKEND_BASE_URL}/api/todos/update/${id}`,
         data,
         {
           headers: {

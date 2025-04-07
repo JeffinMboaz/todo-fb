@@ -24,7 +24,7 @@ const CreateTodo = () => {
     setLoading(true);
     try {
       await axios.post(
-        `http://localhost:5005/api/todos/create`,
+        `${import.meta.env.VITE_BACKEND_BASE_URL}/api/todos/create`,
         data,
         {
           headers: {

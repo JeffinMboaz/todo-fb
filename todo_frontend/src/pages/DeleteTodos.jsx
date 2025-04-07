@@ -22,7 +22,7 @@ const DeleteTodos = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.delete(
-        `http://localhost:5005/api/todos/delete/${id}`,
+        `${import.meta.env.VITE_BACKEND_BASE_URL}/api/todos/delete/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

@@ -17,7 +17,7 @@ function LoginPage() {
     e.preventDefault();
     try {
       const resp = await axios.post(
-        `http://localhost:5005/api/auth/login`,
+        `${import.meta.env.VITE_BACKEND_BASE_URL}/api/auth/login`,
         {
           username,
           password,

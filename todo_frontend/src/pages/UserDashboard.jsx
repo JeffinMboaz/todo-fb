@@ -19,7 +19,7 @@ function UserDashboard() {
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:5005/api/todos/getall`,
+          `${import.meta.env.VITE_BACKEND_BASE_URL}/api/todos/getall`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,

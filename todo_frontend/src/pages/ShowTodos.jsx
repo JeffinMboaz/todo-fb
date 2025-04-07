@@ -24,7 +24,7 @@ const ShowTodos = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `http://localhost:5005/api/todos/${id}`,
+          `${import.meta.env.VITE_BACKEND_BASE_URL}/api/todos/${id}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,

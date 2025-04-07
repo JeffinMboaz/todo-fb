@@ -17,7 +17,7 @@ function UserRegister() {
     e.preventDefault();
     try {
       await axios.post(
-        `http://localhost:5005/api/auth/register`,
+        `${import.meta.env.VITE_BACKEND_BASE_URL}/api/auth/register`,
         {
           username,
           password,
